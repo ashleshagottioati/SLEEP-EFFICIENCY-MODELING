@@ -1,0 +1,60 @@
+**Sleep Efficiency Modeling Project**  
+
+### **Objective**  
+To predict sleep efficiency (time asleep in bed) using demographic, sleep-stage, and lifestyle data to identify key factors affecting sleep quality.  
+
+---
+
+### **Dataset Overview**  
+- **Source**: Kaggle (450+ nights of wearable device data).  
+- **Key Variables**:  
+  - **Demographic**: Age, Gender.  
+  - **Sleep Metrics**: Duration, efficiency (%), REM/deep/light sleep percentages, awakenings.  
+  - **Lifestyle**: Caffeine/alcohol intake (mg), smoking status, exercise frequency.  
+- **EDA Insights**:  
+  - Sleep efficiency peaks at 80-90% for most individuals.  
+  - Negative correlation between caffeine consumption and efficiency.  
+
+---
+
+### **Models Developed & Performance**  
+1. **Linear Regression**  
+   - **Efficiency**: 68%  
+   - **Pros**: Simple, interpretable.  
+   - **Cons**: Struggles with non-linear relationships (e.g., sleep stages).  
+
+2. **K-Nearest Neighbors (KNN)**  
+   - **Efficiency**: 79%  
+   - **Pros**: Captures local patterns (e.g., age-specific sleep trends).  
+   - **Cons**: Performance depends on optimal *k*-value selection.  
+
+3. **Elastic Net Regression**  
+   - **Efficiency**: 75%  
+   - **Pros**: Balances L1/L2 regularization for feature selection.  
+   - **Cons**: Underperformed due to correlated predictors (e.g., sleep stages).  
+
+4. **Random Forest Regression**  
+   - **Efficiency**: 82% (Best Performer)  
+   - **Pros**: Handles non-linear interactions (e.g., caffeine + awakenings).  
+   - **Cons**: Complex interpretation compared to linear models.  
+
+---
+
+### **Key Findings**  
+- **Top Influencers**: Sleep duration, awakenings, and exercise frequency.  
+- **Lifestyle Impact**: High caffeine/alcohol intake reduces efficiency by 10-15%.  
+- **Model Superiority**: Random Forest excels in capturing multi-factor interactions (e.g., age + REM sleep).  
+
+---
+
+### **Future Work**  
+- **Deep Learning**: Implement RNNs/LSTMs to analyze temporal sleep patterns.  
+- **Personalized Models**: Tailor predictions to individual habits (e.g., night-shift workers).  
+- **Clinical Tools**: Integrate models into telehealth platforms for sleep disorder diagnosis (e.g., insomnia, apnea).  
+
+---
+
+### **Conclusion**  
+The project highlights machine learning’s role in sleep health analytics. Random Forest emerged as the most robust model, while future AI-driven approaches could enable personalized sleep optimization and clinical advancements.  
+
+**Impact**: A step toward data-driven sleep medicine, empowering individuals and healthcare providers to improve sleep quality through actionable insights. 🌙🔍
